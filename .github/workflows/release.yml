@@ -21,6 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set up Git user
+        run: |
+          git config --global user.name "${{ env.GIT_USER_NAME }}"
+          git config --global user.email "${{ env.GIT_USER_EMAIL }}"
+
       - name: Run standard-version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
