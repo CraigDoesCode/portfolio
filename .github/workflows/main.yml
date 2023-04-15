@@ -7,9 +7,9 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
-  steps:
-    uses: main/checkout@v3
-    name: unit tests
-    run: |
-      npm install
-      npm run test
+    steps:
+      uses: main/checkout@v3
+      name: unit tests
+      run: |
+        npm install
+        npm run test
