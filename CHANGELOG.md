@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/CraigDoesCode/portfolio/compare/v0.2.0...v0.2.1) (2023-04-16)
+
+
+### Bug Fixes
+
+* publish release assets ([b8e26b2](https://github.com/CraigDoesCode/portfolio/commit/b8e26b2ceab2bdb1299fe8fab592d7d3dcc659c6))
+
+
+
 # [0.2.0](https://github.com/CraigDoesCode/portfolio/compare/v0.1.0...v0.2.0) (2023-04-16)
 
 
