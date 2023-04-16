@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/CraigDoesCode/portfolio/compare/v0.2.1...v0.2.2) (2023-04-16)
+
+
+### Bug Fixes
+
+* remove create release notes ([7974078](https://github.com/CraigDoesCode/portfolio/commit/7974078e792769fe2056f108c9a85556d9fff0ca))
+
+
+
 ## [0.2.1](https://github.com/CraigDoesCode/portfolio/compare/v0.2.0...v0.2.1) (2023-04-16)
 
 
