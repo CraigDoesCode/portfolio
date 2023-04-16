@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  create-changelog:
+  release:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,44 +26,22 @@ jobs:
           git config --global user.name "${{ secrets.GIT_USER_NAME }}"
           git config --global user.email "${{ secrets.GIT_USER_EMAIL }}"
 
-      - name: Run standard-version
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx standard-version --no-verify
-
-  create_release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Get current version
-        uses: actions/github-script@v4
+     - name: Conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { context: repoContext, octokit  } = require('@actions/github');
-            const { data } = await octokit.repos.getLatestRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo
-            });
-            const currentVersion = data.tag_name.replace('v', '');
-            const versionParts = currentVersion.split('.');
-            const nextVersion = `${versionParts[0]}.${versionParts[1]}.${parseInt(versionParts[2]) + 1}`;
-            console.log(`Current version: ${currentVersion}`);
-            console.log(`Next version: ${nextVersion}`);
-            core.setOutput('next_version', nextVersion);
+          github-token: ${{ secrets.github_token }}
+          output-file: "false"
 
-      - name: Create release
+      - name: Create Release
         uses: actions/create-release@v1
-        id: create_release
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
-          tag_name: ${{ steps.get_current_version.outputs.next_version }}
-          release_name: Release ${{ steps.get_current_version.outputs.next_version }}
-          body: |
-            This is a new release.
-          draft: false
-          prerelease: false
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
 
       - name: Publish release assets
         uses: actions/upload-release-asset@v1
