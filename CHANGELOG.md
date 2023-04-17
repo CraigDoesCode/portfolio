@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/CraigDoesCode/portfolio/compare/v0.2.2...v0.3.0) (2023-04-17)
+
+
+### Features
+
+* huskey precommit added ([d686b47](https://github.com/CraigDoesCode/portfolio/commit/d686b47a88f86409662466518362d075fa606759))
+
+
+
 ## [0.2.2](https://github.com/CraigDoesCode/portfolio/compare/v0.2.1...v0.2.2) (2023-04-16)
 
 
