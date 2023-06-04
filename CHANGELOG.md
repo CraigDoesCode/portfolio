@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/CraigDoesCode/portfolio/compare/v0.3.0...v0.4.0) (2023-06-04)
+
+
+### Features
+
+* add nav bar componenet ([1c17384](https://github.com/CraigDoesCode/portfolio/commit/1c17384bbfcceca723b02011f48d4e7ac9558f9e))
+
+
+
 # [0.3.0](https://github.com/CraigDoesCode/portfolio/compare/v0.2.2...v0.3.0) (2023-04-17)
 
 
@@ -45,23 +54,6 @@
 * add id to create_release ([0ab93c3](https://github.com/CraigDoesCode/portfolio/commit/0ab93c33f431cecad081969d435095940b016fd3))
 * auto incoment release version number ([5455ecd](https://github.com/CraigDoesCode/portfolio/commit/5455ecd4759f95b89d01e7bda8e110c1a1d70e82))
 * change to conventional change log action ([89f0286](https://github.com/CraigDoesCode/portfolio/commit/89f0286dc5e4e2c558876dcd9a8827a179403b64))
-
-
-
-# [0.1.0](https://github.com/CraigDoesCode/portfolio/compare/d20c56a4ec9d7bc28ca8018b4372d435b2ac0996...v0.1.0) (2023-04-15)
-
-
-### Bug Fixes
-
-* change env to secrets ([548228d](https://github.com/CraigDoesCode/portfolio/commit/548228dbdd04f1b375623c08207fa23dffc025f5))
-* release action bumped to [@v3](https://github.com/v3) ([75e50a6](https://github.com/CraigDoesCode/portfolio/commit/75e50a6a5fc48cc750683000896539b51278c86b))
-* seat git username and email ([a7a6ab3](https://github.com/CraigDoesCode/portfolio/commit/a7a6ab3c5a02779c7a24d0a00babf84619cb6980))
-
-
-### Features
-
-* add CHANGELOG.md file ([919d7f9](https://github.com/CraigDoesCode/portfolio/commit/919d7f9823323a7b419f078c93f087dd9c7d91d0))
-* add release with standard version to github actions ([d20c56a](https://github.com/CraigDoesCode/portfolio/commit/d20c56a4ec9d7bc28ca8018b4372d435b2ac0996))
 
 
 
