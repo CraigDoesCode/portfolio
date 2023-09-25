@@ -1,11 +1,11 @@
-import styles from "@/styles/NavBar.module.css";
+import styles from "@/styles/NavBar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
 export const NavBar = () => {
   return (
     <div className={styles.navbar}>
-      <Link href="" className={styles.logo}>
+      <Link href="/" className={styles.logo}>
         <Image
           src="/images/logo.png"
           width={50}
@@ -17,8 +17,14 @@ export const NavBar = () => {
       </Link>
 
       <div className={styles.links}>
-        <Link className={styles.buttonPrimary} href="#">
-          contact
+        {/* <ul>
+          <li>
+            <Link href="/portfolio">EXPLORE</Link>
+          </li>
+          <li>PORTFOLIO</li>
+        </ul> */}
+        <Link href="#" className={styles.primary}>
+          CONTACT
         </Link>
       </div>
     </div>
