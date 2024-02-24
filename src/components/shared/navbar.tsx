@@ -17,15 +17,13 @@ export const NavBar = () => {
       </Link>
 
       <div className={styles.links}>
-        {/* <ul>
-          <li>
-            <Link href="/portfolio">EXPLORE</Link>
-          </li>
-          <li>PORTFOLIO</li>
-        </ul> */}
-        <Link href="#" className={styles.primary}>
-          CONTACT
-        </Link>
+        <a
+          href="documents/craig_norford_cv_jan_2024.pdf"
+          className={styles.primary}
+          target="_blank"
+        >
+          DOWNLOAD CV
+        </a>
       </div>
     </div>
   );
