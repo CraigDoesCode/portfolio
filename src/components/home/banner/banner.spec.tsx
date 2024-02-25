@@ -7,7 +7,7 @@ describe("Banner", () => {
     render(<Banner />);
 
     const heading = screen.getByRole("heading", {
-      name: /Hi, I'm Craig 👋/i,
+      name: /FullStack \| Engineer \| Educator \| EdTech/i,
     });
 
     expect(heading).toBeInTheDocument();
