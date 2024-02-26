@@ -2,8 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
-import { NavBar } from "@/components/shared/navbar";
+import { NavBar } from "@/components/shared/navbar/navbar";
 import { Banner } from "@/components/home/banner/banner";
+import { About } from "@/components/home/about/about";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,9 @@ export default function Home() {
       <NavBar />
       <main className={styles.main}>
         <Banner />
+        <div className="container">
+          <About />
+        </div>
       </main>
     </>
   );
